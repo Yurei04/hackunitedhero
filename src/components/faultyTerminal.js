@@ -206,6 +206,7 @@ void main() {
     gl_FragColor = vec4(col, 1.0);
 }
 `;
+const defaultDpr = typeof window !== "undefined" ? Math.min(window.devicePixelRatio || 1, 2) : 1;
 
 function hexToRgb(hex) {
   let h = hex.replace("#", "").trim();
@@ -238,7 +239,7 @@ export default function FaultyTerminal({
   tint = "#ffffff",
   mouseReact = true,
   mouseStrength = 0.2,
-  dpr = Math.min(window.devicePixelRatio || 1, 2),
+  dpr = defaultDpr,
   pageLoadAnimation = true,
   brightness = 1,
   className,
