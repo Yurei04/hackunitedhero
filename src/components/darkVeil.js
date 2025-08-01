@@ -77,7 +77,7 @@ export default function DarkVeil({
   hueShift = 323,
   noiseIntensity = 0,
   scanlineIntensity = 0,
-  speed = 0.5,
+  speed = 2.2,
   scanlineFrequency = 0,
   warpAmount = 0,
   resolutionScale = 1,
@@ -154,7 +154,7 @@ export default function DarkVeil({
   return (
     <canvas
       ref={ref}
-      className="w-full h-full block"
+      className="w-full h-full block rounded-2xl"
     />
   );
 }
