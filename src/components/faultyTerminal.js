@@ -244,6 +244,7 @@ export default function FaultyTerminal({
   brightness = 1,
   className,
   style,
+  s,
   ...rest
 }) {
   const containerRef = useRef(null);

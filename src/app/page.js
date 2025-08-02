@@ -1,6 +1,5 @@
-import HomeClient from "@/components/homeClient";
-import HeroPage from "@/pages/hero";
 
+import HomeClient from "@/components/homeClient";
 
 export default function Home() {
   return (

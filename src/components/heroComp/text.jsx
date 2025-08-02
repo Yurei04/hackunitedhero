@@ -1,47 +1,43 @@
-"use client"
-import Image from "next/image";
-import SpotlightCard from "../spotLightCard";
-import TextType from "../textType";
+  "use client"
+  import Image from "next/image";
+  import SpotlightCard from "../spotLightCard";
+  import TextType from "../textType";
+  import ButtonHero from "./button";
+import RotatingText from "../rotatingText";
 
+export default function TextHero() {
+  const textContent =
+    "A 501(c)(3) non-profit organization that develops the soft skills in tech interested youth through hands on application, such as our flagship hackathons.";
 
-export default function TextHero () {
-    const textContent = "A 501(c)(3) non-profit organization that develops the soft skills in tech interested youth through hands on application, such as our flagship hackathons."
+  return (
+    <div className="flex flex-col items-center lg:items-start justify-center gap-6 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-10 max-w-screen-xl mx-auto">
+      <h1 className="flex flex-row gap-4 text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-center lg:text-left ">
+        <span className="text-violet-50">
+          Hack
+        </span>
+        <RotatingText
+          texts={['United', 'athons!', 'United', 'With Us']}
+          mainClassName="px-2 bg-violet-800/90 text-violet-50 overflow-hidden justify-center rounded-lg"
+          staggerFrom={"last"}
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "-120%" }}
+          staggerDuration={0.025}
+          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+          transition={{ type: "spring", damping: 30, stiffness: 400 }}
+          rotationInterval={3000}
+        />
+      </h1>
 
-    return (
-        <div className="flex flex-col items-center lg:items-baseline  sm:items-center @min-xs:items-center lg:justify-start md:justify-center">
-            <div className="flex flex-row gap-4 justify-start">
-              <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-                <div className="w-[25px] h-[25px]">
-                  <Image
-                    height={100}
-                    width={100}
-                    src="/images/HackUnited2.png"
-                    alt="HackUnitedLogo"
-                    className="rounded-2xl"
-                  />
-                </div>
-              </SpotlightCard>
-              <SpotlightCard className="flex items-center justify-center p-2" spotlightColor="rgba(0, 229, 255, 0.2)">
-                <TextType
-                  text={["Text typing effect", "for your websites", "Happy coding!"]}
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={true}
-                  cursorCharacter="|"
-                />
-              </SpotlightCard>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-8xl text-start font-extrabold leading-tight tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-purple-500">
-                Hack United
-              </span>
-            </h1>
-            <div className="w-1/2 h-auto flex items-center justify-center">
-              <p className="text-xl sm:text-md lg:text-lg">
-                {textContent}
-              </p>
-            </div>
-            
-          </div>
-    )
+      <div className="w-full md:w-3/4 lg:w-2/3 ">
+        <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-center lg:text-left">
+          {textContent}
+        </p>
+      </div>
+
+      <div className=" md:w-3/4 lg:w-2/3 ">
+        <ButtonHero />
+      </div>
+    </div>
+  );
 }
