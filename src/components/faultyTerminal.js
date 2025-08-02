@@ -413,7 +413,7 @@ export default function FaultyTerminal({
   return (
     <div
       ref={containerRef}
-      className={`w-full h-full relative overflow-hidden ${className}`}
+      className={`w-full h-full relative overflow-hidden rounded-3xl  ${className}`}
       style={style}
       {...rest}
     />
