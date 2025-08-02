@@ -32,7 +32,7 @@ export default function LogoHero () {
                 <Image
                     height={300}
                     width={300}
-                    src="/images/HackUnited2NoBkg.png"
+                    src="/images/HackUnited2.png"
                     alt="HackUnitedLogo"
                     className="cursor-target rounded-2xl transition-transform duration-300 ease-in-out hover:scale-110 "
                 />
