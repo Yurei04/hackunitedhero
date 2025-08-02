@@ -22,10 +22,6 @@ export default function HeroPage() {
     "Learn and Create!",
   ];
 
-  const demoItems = [
-    { link: '#', text: 'Mojave', image: 'https://picsum.photos/600/400?random=1' },
-  ];
-
   const [step, setStep] = useState(0);
   const [showMessage, setShowMessage] = useState(true);
   const [showFinal, setShowFinal] = useState(false);
@@ -75,7 +71,7 @@ export default function HeroPage() {
                 <Image
                   height={400}
                   width={400}
-                  src="/images/HackUnited2NoBkg.png"
+                  src="/images/HackUnited2.png"
                   alt="HackUnitedLogo"
                   className="rounded-2xl transition-transform duration-300 ease-in-out hover:scale-110"
                 />
